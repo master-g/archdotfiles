@@ -15,7 +15,9 @@ fish 3.7.1-2
 git 2.48.1-1
 go 2:1.23.5-1
 grub 2:2.12-3
+hypridle 0.1.5-4
 hyprland 0.47.2-1
+hyprlock 0.6.2-3
 hyprpaper 0.7.4-4
 kitty 0.39.1-1
 linux-aarch64 6.13-2
@@ -33,6 +35,7 @@ noto-fonts-emoji 1:2.047-1
 ntp 4.2.8.p18-2
 nwg-look 1.0.2-1
 openssh 9.9p1-2
+otf-geist-mono 1.4.0-2
 pavucontrol 1:6.1-1
 phodav 3.0-3
 pipewire 1:1.2.7-1
@@ -52,6 +55,7 @@ sudo 1.9.16.p2-2.1
 swaync 0.10.1-3
 terminus-font 4.49.1-7
 texinfo 7.1.1-1
+ttf-font-awesome 6.7.2-1
 ttf-jetbrains-mono-nerd 3.3.0-1
 ttf-meslo-nerd 3.3.0-1
 ttf-opensans 3.003-1
