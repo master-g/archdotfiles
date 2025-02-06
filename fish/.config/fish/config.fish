@@ -39,6 +39,24 @@ function top
 	btm $argv
 end
 
+# git
+
+function gd
+  git diff $argv
+end
+
+function gst
+  git status $argv
+end
+
+function gcam
+  git commit -a -m $argv
+end
+
+function gfp
+  git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune origin $argv
+end
+
 set -gx MESA_GL_VERSION_OVERRIDE 4.5
 set -gx MESA_GLSL_VERSION_OVERRIDE 450
 
