@@ -86,6 +86,14 @@ button:hover {
   color: @flamingo;
 }
 
+#cpu {
+  color: @green;
+}
+
+#memory {
+  color: @yellow;
+}
+
 #window {
   color: @rosewater;
 }
