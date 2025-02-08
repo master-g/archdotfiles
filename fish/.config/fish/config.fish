@@ -57,6 +57,7 @@ function gfp
   git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune origin $argv
 end
 
+# make it work in UTM vm
 set -gx MESA_GL_VERSION_OVERRIDE 4.5
 set -gx MESA_GLSL_VERSION_OVERRIDE 450
 
