@@ -1,3 +1,4 @@
+archlinuxcn-keyring 20240531-2
 base 3-2
 base-devel 1-2
 bat 0.25.0-4
@@ -38,6 +39,7 @@ ntp 4.2.8.p18-2
 nwg-look 1.0.2-1
 openssh 9.9p1-2
 otf-geist-mono 1.4.0-2
+paru 2.0.4-1
 pavucontrol 1:6.1-1
 phodav 3.0-3
 pipewire 1:1.2.7-1
