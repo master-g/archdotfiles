@@ -4,6 +4,7 @@
     "margin-right": 10,
     "height" : 30,
     "modules-left": [
+      "tray",
       "hyprland/window"
     ],
     "modules-center": [
@@ -19,6 +20,10 @@
     "clock",
     "custom/exit"
     ],
+    "tray": {
+      "icon-size": 16,
+      "spacing": 10
+    },
     "hyprland/window": {
       "format": "{}",
       "max-length": 35,

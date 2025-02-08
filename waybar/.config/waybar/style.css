@@ -100,6 +100,18 @@ button:hover {
   color: @rosewater;
 }
 
+#tray {
+  padding: 0px 15px 0px 0px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
 #custom-exit {
   color: @mauve
 }
