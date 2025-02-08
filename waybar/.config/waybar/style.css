@@ -62,7 +62,9 @@ button:hover {
 #memory,
 #temperature,
 #network,
-#pulseaudio {
+#pulseaudio,
+#custom-exit
+{
   padding: 0 10px;
 }
 
@@ -91,11 +93,15 @@ button:hover {
 }
 
 #memory {
-  color: @yellow;
+  color: @lavender;
 }
 
 #window {
   color: @rosewater;
+}
+
+#custom-exit {
+  color: @mauve
 }
 
 .modules-right,
