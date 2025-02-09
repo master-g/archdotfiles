@@ -101,7 +101,7 @@
     },
     "custom/exit": {
       "format": "⏻",
-      "on-click": "wlogout",
+      "on-click": "wlogout -b 5",
       "tooltip-format": "Power Menu"
     }
 }

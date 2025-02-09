@@ -3,9 +3,8 @@
 window {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 16pt;
-    color: @text; /* text */
+    color: @blue; /* text */
     background-color: rgba(24, 27, 32, 0.2);
-
 } 
 
 button {
@@ -28,9 +27,13 @@ button:focus {
 button:hover {
     background-size: 50%;
     box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
-    background-color: @green;
+    background-color: @mauve;
     color: transparent;
     transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
+}
+
+button span {
+  font-size: 1.2em;
 }
 
 #shutdown {
