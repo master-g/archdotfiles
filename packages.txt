@@ -40,6 +40,7 @@ nodejs 23.7.0-1
 noto-fonts 1:2025.02.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.047-1
+nwg-displays 0.3.22-3
 nwg-look 1.0.2-1
 openssh 9.9p1-2
 otf-geist-mono 1.4.0-2
@@ -82,3 +83,4 @@ wofi 1.4.1-1
 xdg-user-dirs 0.18-2
 xf86-video-qxl 0.1.6-2
 xorg-xrandr 1.5.3-1
+yazi 0.4.2-2
