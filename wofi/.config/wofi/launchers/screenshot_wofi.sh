@@ -23,7 +23,7 @@ case "$CHOICE" in
         --insensitive \
         --prompt "Select Window" \
         --width 800 \
-        --height 400)
+        --height 400 )
 #        | cliphist decode | wl-copy --type image
 
       # handle window selection
