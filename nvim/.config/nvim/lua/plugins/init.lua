@@ -26,6 +26,7 @@ return {
 				"html-lsp",
 				"css-lsp",
 				"prettier",
+        "json-lsp",
 
 				-- rust
 				"rust-analyzer",
@@ -96,6 +97,12 @@ return {
 			})
 		end,
 	},
+
+  --JSONc
+  {
+    "neoclide/jsonc.vim",
+    ft = "jsonc",
+  },
 
 	-- Rust
 	{
