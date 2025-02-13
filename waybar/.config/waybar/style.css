@@ -77,6 +77,10 @@ button:hover {
   color: @maroon;
 }
 
+#pulseaudio.muted {
+  color: @red;
+}
+
 #network {
   color: @yellow;
 }
@@ -166,6 +170,3 @@ label:focus {
   background-color: #000000;
 }
 
-#pulseaudio.muted {
-  color: @text;
-}
