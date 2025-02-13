@@ -1,6 +1,7 @@
 archlinuxcn-keyring 20240531-2
 base 3-2
 bat 0.25.0-4
+bind 9.20.5-1
 bottom 0.10.2-1
 btrfs-progs 6.12-2
 cliphist 1:0.6.1-1
@@ -59,10 +60,12 @@ polkit 126-2
 qemu-guest-agent 9.2.0-1
 qemu-hw-display-virtio-gpu-pci 9.2.0-1
 qemu-hw-display-virtio-gpu-pci-gl 9.2.0-1
+ripgrep 14.1.1-1
 rofi 1.7.5-3
 rust 1:1.84.1-1
 sassc 3.6.2-5
 slurp 1.5.0-1
+spice-gtk 0.42-4
 spice-vdagent 0.22.1-4
 starship 1.22.1-1
 stow 2.4.1-1
