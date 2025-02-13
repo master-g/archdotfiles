@@ -46,6 +46,7 @@ nodejs 23.7.0-1
 noto-fonts 1:2025.02.01-1
 noto-fonts-cjk 20240730-1
 noto-fonts-emoji 1:2.047-1
+npm 11.1.0-2
 nwg-displays 0.3.22-3
 nwg-look 1.0.2-1
 openssh 9.9p1-2
@@ -62,6 +63,7 @@ polkit 126-2
 qemu-guest-agent 9.2.0-1
 qemu-hw-display-virtio-gpu-pci 9.2.0-1
 qemu-hw-display-virtio-gpu-pci-gl 9.2.0-1
+qview 6.1-4
 ripgrep 14.1.1-1
 rust 1:1.84.1-1
 sassc 3.6.2-5
