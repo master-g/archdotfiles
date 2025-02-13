@@ -21,6 +21,7 @@ fcitx5-rime 5.1.9-1
 firefox 134.0.2-1
 fish 3.7.1-2
 foliate 3.2.1-1
+fontforge 20230101-5
 git 2.48.1-1
 grim 1.4.1-2
 grml-zsh-config 0.19.14-1
@@ -35,6 +36,7 @@ linux-aarch64 6.13-2
 linux-firmware 20250109.7673dffd-1
 lsd 0.19.0-1
 lua 5.4.7-1
+make 4.4.1-2
 man-db 2.13.0-1
 man-pages 6.10-1
 nemo 6.4.3-1
@@ -61,7 +63,6 @@ qemu-guest-agent 9.2.0-1
 qemu-hw-display-virtio-gpu-pci 9.2.0-1
 qemu-hw-display-virtio-gpu-pci-gl 9.2.0-1
 ripgrep 14.1.1-1
-rofi 1.7.5-3
 rust 1:1.84.1-1
 sassc 3.6.2-5
 slurp 1.5.0-1
@@ -91,3 +92,4 @@ xdg-user-dirs 0.18-2
 xf86-video-qxl 0.1.6-2
 xorg-xrandr 1.5.3-1
 yazi 0.4.2-2
+zip 3.0-11
