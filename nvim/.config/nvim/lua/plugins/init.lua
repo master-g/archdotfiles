@@ -28,9 +28,13 @@ return {
 				"prettier",
         "json-lsp",
 
+        -- cpp
+        "clangd",
+
 				-- rust
 				"rust-analyzer",
 			},
+      automatic_installation = true,
 		},
 	},
 
@@ -136,5 +140,12 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, {name="crates"})
     end,
-  }
+  },
+
+  -- vim tmux navigator
+  -- for seamlessly navigate between vim and tmux panes
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false, -- always load this plugin
+  },
 }
