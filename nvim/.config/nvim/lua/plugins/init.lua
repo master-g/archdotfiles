@@ -5,20 +5,20 @@ return {
 		opts = require("configs.conform"),
 	},
 
-  -- nvim-tree
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = {
-      filters = {
-        dotfiles = false,
-      },
-      git = {
-        enable = true,
-        ignore = false,
-        timeout = 500,
-      },
-    },
-  },
+	-- nvim-tree
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = {
+			filters = {
+				dotfiles = false,
+			},
+			git = {
+				enable = true,
+				ignore = false,
+				timeout = 500,
+			},
+		},
+	},
 
 	-- These are some examples, uncomment them if you want to see them work!
 	{
@@ -41,15 +41,19 @@ return {
 				"html-lsp",
 				"css-lsp",
 				"prettier",
-        "json-lsp",
+				"json-lsp",
 
-        -- cpp
-        "clangd",
+				-- cpp
+				"clangd",
 
 				-- rust
 				"rust-analyzer",
+				"taplo",
+
+				-- general
+				"codelldb",
 			},
-      automatic_installation = true,
+			automatic_installation = true,
 		},
 	},
 
@@ -117,11 +121,11 @@ return {
 		end,
 	},
 
-  --JSONc
-  {
-    "neoclide/jsonc.vim",
-    ft = "jsonc",
-  },
+	--JSONc
+	{
+		"neoclide/jsonc.vim",
+		ft = "jsonc",
+	},
 
 	-- Rust
 	{
@@ -131,36 +135,36 @@ return {
 			vim.g.rustfmt_autosave = 1
 		end,
 	},
-  {
-    "mrcjkb/rustaceanvim",
-    version = "^5",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-    config = function()
-      require("configs.rustaceanvim")
-    end,
-  },
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^5",
+		ft = "rust",
+		dependencies = "neovim/nvim-lspconfig",
+		config = function()
+			require("configs.rustaceanvim")
+		end,
+	},
 
-  {
-    "saecki/crates.nvim",
-    ft = {"rust", "toml"},
-    config = function(_, opts)
-      local crates = require("crates")
-      crates.setup(opts)
-      crates.show()
-    end
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      table.insert(opts.sources, {name="crates"})
-    end,
-  },
+	{
+		"saecki/crates.nvim",
+		ft = { "rust", "toml" },
+		config = function(_, opts)
+			local crates = require("crates")
+			crates.setup(opts)
+			crates.show()
+		end,
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		opts = function(_, opts)
+			table.insert(opts.sources, { name = "crates" })
+		end,
+	},
 
-  -- vim tmux navigator
-  -- for seamlessly navigate between vim and tmux panes
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false, -- always load this plugin
-  },
+	-- vim tmux navigator
+	-- for seamlessly navigate between vim and tmux panes
+	{
+		"christoomey/vim-tmux-navigator",
+		lazy = false, -- always load this plugin
+	},
 }
