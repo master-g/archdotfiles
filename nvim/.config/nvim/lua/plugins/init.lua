@@ -5,6 +5,21 @@ return {
 		opts = require("configs.conform"),
 	},
 
+  -- nvim-tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      filters = {
+        dotfiles = false,
+      },
+      git = {
+        enable = true,
+        ignore = false,
+        timeout = 500,
+      },
+    },
+  },
+
 	-- These are some examples, uncomment them if you want to see them work!
 	{
 		"neovim/nvim-lspconfig",
