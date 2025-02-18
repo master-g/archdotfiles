@@ -62,6 +62,22 @@ function fff
   fzf --preview 'bat --style=numbers --color=always {}' $argv
 end
 
+function ffe
+  set selected (fff)
+  if test -n "$selected"
+    nvim "$selected"
+  end
+end
+  
+function fpk
+  set process (ps aux | fzf --height=40% --border --preview 'echo {}')
+  if test -n "$process"
+    set pid (echo $process | awk '{print $2}')
+    echo "killing process $pid ..."
+    kill -9 $pid
+  end
+end
+
 # make it work in UTM vm
 set -gx MESA_GL_VERSION_OVERRIDE 4.5
 set -gx MESA_GLSL_VERSION_OVERRIDE 450
