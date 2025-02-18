@@ -7,6 +7,10 @@ set -x PATH /home/mg/.cargo/bin $PATH
 
 # Alias
 
+function vi
+	nvim $argv
+end
+
 function vim
 	nvim $argv
 end
