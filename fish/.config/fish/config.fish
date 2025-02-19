@@ -114,6 +114,7 @@ if set -q found_conda_path
 else
   echo "Conda not found in common locations. If installed elsewhere, add to PATH manually."
 end
+set -gx TERMINFO /usr/share/terminfo
 # <<< conda initialize <<<
 
 # make it work in UTM vm
