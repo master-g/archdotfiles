@@ -121,5 +121,8 @@ set -gx TERMINFO /usr/share/terminfo
 set -gx MESA_GL_VERSION_OVERRIDE 4.5
 set -gx MESA_GLSL_VERSION_OVERRIDE 450
 
+# electron stuff
+set -gx ELECTRON_OZONE_PLATFORM_HINT auto
+
 starship init fish | source
 
