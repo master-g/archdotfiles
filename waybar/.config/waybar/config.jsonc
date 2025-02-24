@@ -74,7 +74,7 @@
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "{icon}{temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
     "format-icons": ["", "", ""],
   },
   "battery": {
