@@ -124,5 +124,9 @@ set -gx MESA_GLSL_VERSION_OVERRIDE 450
 # electron stuff
 set -gx ELECTRON_OZONE_PLATFORM_HINT auto
 
+# zoxide
+zoxide init fish | source
+
+# starship
 starship init fish | source
 
