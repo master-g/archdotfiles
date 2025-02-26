@@ -13,6 +13,7 @@
     "cpu",
     "memory",
     "clock",
+    "custom/chatbox",
     "custom/exit",
   ],
   "tray": {
@@ -117,5 +118,10 @@
     "format": "⏻",
     "on-click": "wlogout -b 5",
     "tooltip-format": "Power Menu",
+  },
+  "custom/chatbox": {
+    "format": "",
+    "on-click": "sh ~/.config/wofi/launchers/chatbox.sh",
+    "tooltip-format": "Chatbox",
   },
 }

@@ -21,6 +21,7 @@ window#waybar {
 #temperature,
 #network,
 #pulseaudio,
+#custom-chatbox,
 #custom-exit,
 #tray,
 #workspaces,
@@ -99,6 +100,14 @@ window#waybar {
 
 #window {
   color: @rosewater;
+}
+
+#custom-chatbox {
+  padding: 0 16px 0 8px;
+  color: @sky;
+}
+#custom-chatbox:hover {
+  background-color: @surface2;
 }
 
 #custom-exit {
