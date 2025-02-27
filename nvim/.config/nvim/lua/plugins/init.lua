@@ -141,19 +141,46 @@ return {
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
 		config = function()
+			-- debug setup
+			local mason_registry = require("mason-registry")
+			local codelldb = mason_registry.get_package("codelldb")
+			local extension_path = codelldb:get_install_path() .. "/extension/"
+			local codelldb_path = extension_path .. "adapter/codelldb"
+			local liblldb_path = extension_path .. "lib/liblldb.so"
+
+			if vim.loop.os_uname().sysname == "Darwin" then
+				liblldb_path = extension_path .. "lib/liblldb.dylib"
+			end
+
+			local cfg = require("rustaceanvim.config")
+
+			vim.g.rustaceanvim = {
+				dap = {
+					adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
+				},
+			}
+
 			require("configs.rustaceanvim")
 		end,
 	},
 
 	{
 		"saecki/crates.nvim",
-		ft = { "rust", "toml" },
-		config = function(_, opts)
-			local crates = require("crates")
-			crates.setup(opts)
-			crates.show()
+		ft = { "toml" },
+		config = function()
+			require("crates").setup({
+				completion = {
+					cmp = {
+						enabled = true,
+					},
+				},
+			})
+			require("cmp").setup.buffer({
+				sources = { { name = "crates" } },
+			})
 		end,
 	},
+
 	{
 		"hrsh7th/nvim-cmp",
 		opts = function(_, opts)
@@ -166,6 +193,34 @@ return {
 	{
 		"christoomey/vim-tmux-navigator",
 		lazy = false, -- always load this plugin
+	},
+
+	-- debug adapter protocol
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			local dap, dapui = require("dap"), require("dapui")
+			dap.listeners.before.attach.dapui_config = function()
+				dapui.open()
+			end
+			dap.listeners.before.launch.dapui_config = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_terminated.dapui_config = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_exited.dapui_config = function()
+				dapui.close()
+			end
+		end,
+	},
+
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+		config = function()
+			require("dapui").setup()
+		end,
 	},
 
 	-- trouble
