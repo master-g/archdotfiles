@@ -140,16 +140,17 @@ return {
 		version = "^5",
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
+    lazy = false,
 		config = function()
 			-- debug setup
 			local mason_registry = require("mason-registry")
 			local codelldb = mason_registry.get_package("codelldb")
 			local extension_path = codelldb:get_install_path() .. "/extension/"
 			local codelldb_path = extension_path .. "adapter/codelldb"
-			local liblldb_path = extension_path .. "lib/liblldb.so"
+			local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
 			if vim.loop.os_uname().sysname == "Darwin" then
-				liblldb_path = extension_path .. "lib/liblldb.dylib"
+				liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
 			end
 
 			local cfg = require("rustaceanvim.config")
@@ -160,7 +161,7 @@ return {
 				},
 			}
 
-			require("configs.rustaceanvim")
+			-- require("configs.rustaceanvim")
 		end,
 	},
 
@@ -204,7 +205,7 @@ return {
 				dapui.open()
 			end
 			dap.listeners.before.launch.dapui_config = function()
-				dapui.close()
+				dapui.open()
 			end
 			dap.listeners.before.event_terminated.dapui_config = function()
 				dapui.close()
