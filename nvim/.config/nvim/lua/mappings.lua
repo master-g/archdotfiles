@@ -32,3 +32,4 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 
 -- rustaceanvim
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+map("n", "<M-a>", "<cmd>lua vim.cmd('RustLsp codeAction')<CR>", { desc = "RustLsp code action" })
