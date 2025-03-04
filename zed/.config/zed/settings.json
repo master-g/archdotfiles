@@ -7,6 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": "Catppuccin Mocha",
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "vim_mode": true,
   "base_keymap": "VSCode",
   "cursor_blink": false,

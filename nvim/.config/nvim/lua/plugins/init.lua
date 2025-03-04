@@ -159,6 +159,13 @@ return {
 				dap = {
 					adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
 				},
+        tools = {
+          float_win_config = {
+            border = "rounded",
+            auto_focus = true,
+            open_split = "horizontal",
+          },
+        }
 			}
 
 			-- require("configs.rustaceanvim")
