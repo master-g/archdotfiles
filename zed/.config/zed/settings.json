@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "cursor_blink": false,
+  "theme": "Catppuccin Mocha",
+  "ui_font_family": "Nunito",
+  "buffer_font_family": "MonoLisa Variable",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "ss02": true
+  },
+  "buffer_font_size": 15,
+  "terminal": {
+    "font_family": "MesloLGLDZ Nerd Font",
+    "font_size": 12,
+    "option_as_meta": true
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "useParameterNames": true,
+            "enable": "skip_trivial"
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        },
+        "rust": {
+          "analyzerTargetDir": true
+        },
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        }
+      }
+    }
+  }
+}
