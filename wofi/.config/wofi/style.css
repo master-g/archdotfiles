@@ -61,7 +61,7 @@ window {
   margin: 0px;
   padding: 10px;
   border: 2px solid @lavender;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: @base;
 }
 
