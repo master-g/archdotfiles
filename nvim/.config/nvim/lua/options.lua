@@ -4,6 +4,8 @@ require "nvchad.options"
 
 local o = vim.o
 o.cursorlineopt ='both' -- to enable cursorline!
+o.tabstop = 4
+o.shiftwidth = 4
 
 -- enable inlay hint
 vim.lsp.inlay_hint.enable(true)
