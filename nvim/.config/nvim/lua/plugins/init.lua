@@ -50,6 +50,9 @@ return {
 				"rust-analyzer",
 				"taplo",
 
+                -- python
+                "pyright",
+
 				-- general
 				"codelldb",
 			},
@@ -65,6 +68,7 @@ return {
 				-- defaults
 				"vim",
 				"lua",
+                "luadoc",
 				"vimdoc",
 				"html",
 				"css",
@@ -72,11 +76,16 @@ return {
 				-- rust
 				"rust",
 				"toml",
+                "yaml",
 
 				-- work
+                "bash",
+                "fish",
 				"java",
 				"javascript",
 				"kotlin",
+                "markdown",
+                "printf",
 				"python",
 				"tsx",
 				"typescript",
@@ -85,6 +94,13 @@ return {
 				"c",
 				"cpp",
 			},
+
+            highlight = {
+                enable = true,
+                use_languagetree = true,
+            },
+
+            indent = { enable = true }
 		},
 	},
 
