@@ -23,12 +23,31 @@ return {
 	-- These are some examples, uncomment them if you want to see them work!
 	{
 		"neovim/nvim-lspconfig",
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
+			require("nvchad.configs.lspconfig").defaults()
 			require("configs.lspconfig")
 		end,
 	},
 
-	-- Mason
+	{
+		"williamboman/mason-lspconfig.nvim",
+		event = "VeryLazy",
+		dependencies = { "nvim-lspconfig" },
+		config = function()
+			require("mason-lspconfig").setup()
+		end,
+	},
+
+	{
+		"mfussenegger/nvim-lint",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("configs.lint")
+		end,
+	},
+
+	--[[ Mason
 	{
 		"williamboman/mason.nvim",
 		opts = {
@@ -50,58 +69,39 @@ return {
 				"rust-analyzer",
 				"taplo",
 
-                -- python
-                "pyright",
+				-- python
+				"pyright",
 
 				-- general
 				"codelldb",
 			},
 			automatic_installation = true,
 		},
+	}, --]]
+	{
+		"zapling/mason-conform.nvim",
+		event = "VeryLazy",
+		dependencies = { "conform.nvim" },
+		config = function()
+			require("configs.mason-conform")
+		end,
+	},
+	{
+		"rshkarin/mason-nvim-lint",
+		event = "VeryLazy",
+		dependencies = { "nvim-lint" },
+		config = function()
+			require("configs.mason-lint")
+		end,
 	},
 
 	-- Tree sitter
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-				-- defaults
-				"vim",
-				"lua",
-                "luadoc",
-				"vimdoc",
-				"html",
-				"css",
-
-				-- rust
-				"rust",
-				"toml",
-                "yaml",
-
-				-- work
-                "bash",
-                "fish",
-				"java",
-				"javascript",
-				"kotlin",
-                "markdown",
-                "printf",
-				"python",
-				"tsx",
-				"typescript",
-
-				-- low level
-				"c",
-				"cpp",
-			},
-
-            highlight = {
-                enable = true,
-                use_languagetree = true,
-            },
-
-            indent = { enable = true }
-		},
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("configs.treesitter")
+		end,
 	},
 
 	-- Copilot
@@ -156,7 +156,7 @@ return {
 		version = "^5",
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
-    lazy = false,
+		lazy = false,
 		config = function()
 			-- debug setup
 			local mason_registry = require("mason-registry")
@@ -175,13 +175,13 @@ return {
 				dap = {
 					adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
 				},
-        tools = {
-          float_win_config = {
-            border = "rounded",
-            auto_focus = true,
-            open_split = "horizontal",
-          },
-        }
+				tools = {
+					float_win_config = {
+						border = "rounded",
+						auto_focus = true,
+						open_split = "horizontal",
+					},
+				},
 			}
 
 			-- require("configs.rustaceanvim")
