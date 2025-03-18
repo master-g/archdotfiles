@@ -6,19 +6,50 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
+	theme = "catppuccin",
 
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-  },
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+	},
 }
 
-M.nvdash = { load_on_startup = true }
+local pwdLine = ""
+local handle = io.popen("pwd")
+if handle ~= nil then
+	local pwd = handle:read()
+	handle:close()
+	pwdLine = pwd
+	local spaceToFill = (50 - string.len(pwd))
+	for i = 0, spaceToFill do
+		if i % 2 == 0 then
+			pwdLine = pwdLine .. " "
+		else
+			pwdLine = " " .. pwdLine
+		end
+	end
+end
+
+M.nvdash = {
+	load_on_startup = true,
+	header = {
+		[[                                                                       ]],
+		[[                                                                     ]],
+		[[       ████ ██████           █████      ██                     ]],
+		[[      ███████████             █████                             ]],
+		[[      █████████ ███████████████████ ███   ███████████   ]],
+		[[     █████████  ███    █████████████ █████ ██████████████   ]],
+		[[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+		[[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+		[[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+		[[                                                                       ]],
+		pwdLine,
+	},
+}
 M.ui = {
-  tabufline = {
-    lazyload = false,
-  },
+	tabufline = {
+		lazyload = false,
+	},
 }
 
 return M
