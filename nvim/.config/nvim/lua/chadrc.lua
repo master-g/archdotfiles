@@ -30,7 +30,7 @@ if handle ~= nil then
 	end
 end
 
-local banner = require("configs/banners/genshin")
+local banner = require("configs/banners/yuanshen")
 table.insert(banner, pwdLine)
 
 M.nvdash = {
