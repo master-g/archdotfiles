@@ -1,9 +1,9 @@
-require "nvchad.options"
+require("nvchad.options")
 
 -- add yours here!
 
 local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
+o.cursorlineopt = "both" -- to enable cursorline!
 o.tabstop = 4
 o.shiftwidth = 4
 
@@ -14,3 +14,4 @@ vim.lsp.inlay_hint.enable(true)
 -- vim.o.guifont = "MonoLisa Variable:h12"
 -- neovide
 vim.g.neovide_cursor_vfx_mode = "railgun"
+vim.g.neovide_input_macos_option_key_is_meta = "only_left"

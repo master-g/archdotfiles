@@ -1,6 +1,14 @@
 [font]
-normal = ["MonoLisa Variable"]
-size = 14.0
+normal = ["MonoLisa Variable", "MesloLGSDZ Nerd Font"]
+size = 13.5
 
 [font.features]
-"MonoLisa Nerd Font" = ["+ss01", "+ss07", "+ss11", "-calt", "+ss09", "+ss02", "+ss14"]
+"MonoLisa Nerd Font" = [
+  "+ss01",
+  "+ss07",
+  "+ss11",
+  "-calt",
+  "+ss09",
+  "+ss02",
+  "+ss14",
+]
