@@ -30,7 +30,7 @@ if handle ~= nil then
 	end
 end
 
-local banner = require("configs/banners/yuanshen")
+local banner = require("configs/banners/neovim")
 table.insert(banner, pwdLine)
 
 M.nvdash = {
