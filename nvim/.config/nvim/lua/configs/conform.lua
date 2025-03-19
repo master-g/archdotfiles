@@ -6,7 +6,7 @@ local options = {
 		json = { "prettier" },
 		jsonc = { "prettier" },
 		rust = { "rustfmt" },
-    toml = { "taplo" },
+		toml = { "taplo" },
 	},
 
 	format_on_save = {
