@@ -13,16 +13,7 @@ return {
 	-- nvim-tree
 	{
 		"nvim-tree/nvim-tree.lua",
-		opts = {
-			filters = {
-				dotfiles = false,
-			},
-			git = {
-				enable = true,
-				ignore = false,
-				timeout = 500,
-			},
-		},
+		opts = require("configs.nvim-tree"),
 	},
 
 	-- These are some examples, uncomment them if you want to see them work!
@@ -115,30 +106,7 @@ return {
 		cmd = "Copilot",
 		event = "InsertEnter",
 		config = function()
-			require("copilot").setup({
-				suggestion = {
-					auto_trigger = true,
-					debounce = 100,
-					keymap = {
-						accept = "<Tab>",
-					},
-				},
-				filetypes = {
-					css = true,
-					eruby = true,
-					go = true,
-					html = true,
-					javascript = true,
-					lua = true,
-					php = true,
-					ruby = true,
-					rust = true,
-					typescript = true,
-					vue = true,
-					["*"] = false,
-				},
-				server_opts_overrides = {},
-			})
+			require("configs.copilot")
 		end,
 	},
 	{
@@ -149,37 +117,7 @@ return {
 			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
 		build = "make tiktoken",
-		opts = {
-			-- the key mapping will mess up with other plugins
-			-- check [here](https://github.com/CopilotC-Nvim/CopilotChat.nvim/issues/986)
-
-			prompts = {
-				ExplainZh = {
-					prompt = "为所选代码撰写解释说明，采用段落形式的文本描述.",
-					system_prompt = "COPILOT_EXPLAIN",
-				},
-				ReviewZh = {
-					prompt = "审查所选代码",
-					system_prompt = "COPILOT_REVIEW",
-				},
-				FixZh = {
-					prompt = "这段代码存在问题，找出问题所在，并在修复的基础上重写代码。解释出错的地方以及你的修改是如何解决这些问题的。",
-				},
-				OptimizeZh = {
-					prompt = "优化所选代码以提升性能和可读性。解释你的优化策略以及你所做更改的好处。",
-				},
-				DocsZh = {
-					prompt = "为所选代码添加文档注释。",
-				},
-				Tests = {
-					prompt = "请为我的代码生成测试用例。",
-				},
-				Commit = {
-					prompt = "请按照 commitizen 规范为该更改编写提交信息。请确保标题不超过 50 个字符，并在 72 个字符处换行格式化，格式采用 gitcommit 代码块",
-					context = "git:staged",
-				},
-			},
-		},
+		opts = require("configs.copilotchat"),
 		-- lazy = false,
 	},
 
@@ -204,33 +142,7 @@ return {
 		dependencies = "neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			-- debug setup
-			local mason_registry = require("mason-registry")
-			local codelldb = mason_registry.get_package("codelldb")
-			local extension_path = codelldb:get_install_path() .. "/extension/"
-			local codelldb_path = extension_path .. "adapter/codelldb"
-			local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
-
-			if vim.loop.os_uname().sysname == "Darwin" then
-				liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
-			end
-
-			local cfg = require("rustaceanvim.config")
-
-			vim.g.rustaceanvim = {
-				dap = {
-					adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
-				},
-				tools = {
-					float_win_config = {
-						border = "rounded",
-						auto_focus = true,
-						open_split = "horizontal",
-					},
-				},
-			}
-
-			-- require("configs.rustaceanvim")
+			require("configs.rustaceanvim")
 		end,
 	},
 
@@ -269,19 +181,7 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
-			local dap, dapui = require("dap"), require("dapui")
-			dap.listeners.before.attach.dapui_config = function()
-				dapui.open()
-			end
-			dap.listeners.before.launch.dapui_config = function()
-				dapui.open()
-			end
-			dap.listeners.before.event_terminated.dapui_config = function()
-				dapui.close()
-			end
-			dap.listeners.before.event_exited.dapui_config = function()
-				dapui.close()
-			end
+			require("configs.nvim-dap")
 		end,
 	},
 
@@ -298,37 +198,6 @@ return {
 		"folke/trouble.nvim",
 		opts = {},
 		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xx",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xX",
-				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
-			},
-			{
-				"<leader>cs",
-				"<cmd>Trouble symbols toggle focus=false<cr>",
-				desc = "Symbols (Trouble)",
-			},
-			{
-				"<leader>cl",
-				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-				desc = "LSP Definitions / references / ... (Trouble)",
-			},
-			{
-				"<leader>xL",
-				"<cmd>Trouble loclist toggle<cr>",
-				desc = "Location List (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
-		},
+		keys = require("configs.trouble").keys,
 	},
 }
