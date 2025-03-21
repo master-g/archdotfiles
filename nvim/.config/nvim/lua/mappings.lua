@@ -29,6 +29,10 @@ map(
 map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
 map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
 
+-- LSP
+map("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "LSP rename" })
+-- map("n", "<Leader>ra", "<cmd>lua require('nvchad_ui.renamer').open()<CR>", { desc = "LSP renamer" })
+
 -- rustaceanvim
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 map("n", "<M-.>", "<cmd>lua vim.cmd('RustLsp codeAction')<CR>", { desc = "RustLsp code action" })

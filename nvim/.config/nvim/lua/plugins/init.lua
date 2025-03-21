@@ -5,6 +5,11 @@ return {
 		opts = require("configs.conform"),
 	},
 
+	{
+		"folke/which-key.nvim",
+		lazy = false,
+	},
+
 	-- nvim-tree
 	{
 		"nvim-tree/nvim-tree.lua",
