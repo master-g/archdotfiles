@@ -27,7 +27,7 @@
       "": "MG@Arch",
     },
     "separate-outputs": true,
-    "on-click": "sh ~/.config/wofi/launchers/random_wallpaper.sh"
+    "on-click": "sh ~/.config/wofi/launchers/random_wallpaper.sh",
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -121,7 +121,7 @@
   },
   "custom/chatbox": {
     "format": "",
-    "on-click": "sh ~/.config/wofi/launchers/chatbox.sh",
+    "on-click": "cherry-studio-electron",
     "tooltip-format": "Chatbox",
   },
 }
