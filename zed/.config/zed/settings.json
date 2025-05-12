@@ -9,6 +9,7 @@
 {
   "icon_theme": "Catppuccin Mocha",
   "assistant": {
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3-7-sonnet"
@@ -21,7 +22,7 @@
   "vim_mode": true,
   "base_keymap": "VSCode",
   "cursor_blink": false,
-  "theme": "Catppuccin Mocha",
+  "theme": "Gruvbox Dark Hard",
   "ui_font_family": "Nunito",
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
