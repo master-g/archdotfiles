@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "icon_theme": "Catppuccin Mocha",
-  "assistant": {
+  "agent": {
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
@@ -23,7 +23,7 @@
   "base_keymap": "VSCode",
   "cursor_blink": false,
   "theme": "Gruvbox Dark Hard",
-  "ui_font_family": "Nunito",
+  "ui_font_family": "Montserrat",
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
     "calt": true,
