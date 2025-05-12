@@ -122,6 +122,6 @@
   "custom/chatbox": {
     "format": "",
     "on-click": "cherry-studio-electron",
-    "tooltip-format": "Chatbox",
+    "tooltip-format": "CherryStudio",
   },
 }
