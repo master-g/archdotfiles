@@ -1,0 +1,17 @@
+# /home/mg/.config/tmuxinator/mg.yml
+
+name: mg
+root: ~/
+
+windows:
+  - window1:
+      layout: even-horizontal
+      panes:
+        - curl wttr.in/Shenzhen
+  - window2:
+      panes:
+        - cd ~/Documents/workspace/
+  - window3:
+      panes:
+        - curl rate.sx/btc@24h
+
