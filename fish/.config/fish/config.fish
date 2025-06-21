@@ -43,6 +43,12 @@ function top
 	btm $argv
 end
 
+# tmux
+
+function mux
+    tmuxinator $argv
+end
+
 # git
 
 function gd
