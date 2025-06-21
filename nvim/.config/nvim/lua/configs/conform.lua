@@ -7,6 +7,7 @@ local options = {
 		jsonc = { "prettier" },
 		rust = { "rustfmt" },
 		toml = { "taplo" },
+		yaml = { "prettier" },
 	},
 
 	format_on_save = {

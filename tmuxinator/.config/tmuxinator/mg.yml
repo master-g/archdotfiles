@@ -14,4 +14,3 @@ windows:
   - window3:
       panes:
         - curl rate.sx/btc@24h
-
