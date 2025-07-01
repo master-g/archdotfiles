@@ -9,10 +9,10 @@
 {
   "icon_theme": "Catppuccin Mocha",
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
