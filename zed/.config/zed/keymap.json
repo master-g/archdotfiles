@@ -21,7 +21,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-alt-`": "workspace::ToggleBottomDock"
+      "ctrl alt `": "workspace::ToggleBottomDock"
     }
   }
 ]
