@@ -52,40 +52,48 @@ end
 # git
 
 function gd
-  git diff $argv
+    git diff $argv
 end
 
 function gst
-  git status $argv
+    git status $argv
 end
 
 function gcam
-  git commit -a -m $argv
+    git commit -a -m $argv
 end
 
 function gfp
-  git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune origin $argv
+    git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune origin $argv
+end
+
+function gce
+    gh copilot explain $argv
+end
+
+function gcs
+    gh copilot suggest $argv
 end
 
 # fzf
 function fff
-  fzf --preview 'bat --style=numbers --color=always {}' $argv
+    fzf --preview 'bat --style=numbers --color=always {}' $argv
 end
 
 function ffe
-  set selected (fff)
-  if test -n "$selected"
-    nvim "$selected"
-  end
+    set selected (fff)
+    if test -n "$selected"
+        nvim "$selected"
+    end
 end
   
 function fpk
-  set process (ps aux | fzf --height=40% --border --preview 'echo {}')
-  if test -n "$process"
-    set pid (echo $process | awk '{print $2}')
-    echo "killing process $pid ..."
-    kill -9 $pid
-  end
+    set process (ps aux | fzf --height=40% --border --preview 'echo {}')
+    if test -n "$process"
+      set pid (echo $process | awk '{print $2}')
+      echo "killing process $pid ..."
+      kill -9 $pid
+    end
 end
 
 # >>> conda initialize >>>

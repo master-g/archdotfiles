@@ -8,6 +8,7 @@ local options = {
 		rust = { "rustfmt" },
 		toml = { "taplo" },
 		yaml = { "prettier" },
+		fish = { "fish-lsp" },
 	},
 
 	format_on_save = {

@@ -90,6 +90,12 @@ return {
 			require("configs.mason-lint")
 		end,
 	},
+	-- fish
+	{
+		"ndonfris/fish-lsp",
+		ft = "fish",
+		dependencies = "neovim/nvim-lspconfig",
+	},
 
 	-- Tree sitter
 	{

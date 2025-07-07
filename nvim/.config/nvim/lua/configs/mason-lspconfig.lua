@@ -37,6 +37,7 @@ local all_servers = {
 
 	-- general
 	"codelldb",
+	"fish-lsp",
 }
 for _, s in ipairs(lspconfig.servers) do
 	if not table_contains(ignore_install, s) then
