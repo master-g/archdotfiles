@@ -49,6 +49,9 @@
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
+        "check": {
+          "command": "clippy"
+        },
         "inlayHints": {
           "maxLength": null,
           "lifetimeElisionHints": {

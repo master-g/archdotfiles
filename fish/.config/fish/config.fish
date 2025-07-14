@@ -6,7 +6,7 @@ end
 set -x DEFAULT_USER mg
 
 # Detect OS
-set -l os_type (uname -s)
+set -gx os_type (uname -s)
 
 # Proxy functions
 function proxy --description "Enable proxy"
@@ -72,7 +72,7 @@ set -x TERM xterm-256color
 # Cross-platform development tools setup
 
 # Android development
-set -l android_possible_paths
+set -gx android_possible_paths
 switch $os_type
     case Darwin
         set android_possible_paths "$HOME/Library/Android/sdk" "$HOME/Android/Sdk"
