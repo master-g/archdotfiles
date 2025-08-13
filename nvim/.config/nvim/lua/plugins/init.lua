@@ -156,13 +156,15 @@ return {
 		"saecki/crates.nvim",
 		ft = { "toml" },
 		config = function()
-			require("crates").setup({
+			-- NvChad said that `completion.cmp.enabled` is deprecated
+			-- the nvim-cmp source will be removed soon. Use the in-process language server instead.
+			--[[ require("crates").setup({
 				completion = {
 					cmp = {
 						enabled = true,
 					},
 				},
-			})
+			})--]]
 			require("cmp").setup.buffer({
 				sources = { { name = "crates" } },
 			})
