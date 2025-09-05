@@ -32,7 +32,7 @@
   "vim_mode": true,
   "base_keymap": "VSCode",
   "cursor_blink": false,
-  "theme": "Zedokai (Filter Spectrum)",
+  "theme": "Zedokai (Filter Ristretto)",
   "ui_font_family": "Montserrat",
   "buffer_font_family": "MonoLisa Variable",
   "buffer_font_features": {
