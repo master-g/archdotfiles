@@ -64,7 +64,7 @@
   },
   "cpu": {
     "format": " {usage}%",
-    "on-click": "kitty --class monitor -e btm",
+    "on-click": "kitty --class monitor -e btop",
     "tooltip": false,
   },
   "memory": {
