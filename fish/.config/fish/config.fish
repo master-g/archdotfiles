@@ -194,8 +194,16 @@ set -gx MESA_GLSL_VERSION_OVERRIDE 450
 set -gx ELECTRON_OZONE_PLATFORM_HINT auto
 
 # Aliases
+function v --description "Alias v to nvim"
+    nvim $argv
+end
+
 function vi --description "Alias vi to nvim"
     nvim $argv
+end
+
+function vv --description "Alias vv to neovide"
+    neovide $argv
 end
 
 function vim --description "Alias vim to nvim"
