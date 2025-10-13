@@ -18,12 +18,11 @@
   },
   "icon_theme": "Catppuccin Mocha",
   "agent": {
-    "default_open_ai_model": "gpt-4.1",
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4.5"
     }
   },
   "features": {
@@ -45,6 +44,7 @@
   "terminal": {
     "font_family": "MesloLGLDZ Nerd Font",
     "font_size": 12,
+    "line_height": "comfortable",
     "option_as_meta": true
   },
   "tabs": {
