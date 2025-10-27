@@ -214,16 +214,16 @@ function cat --description "Alias cat to bat"
     bat $argv
 end
 
-function ls --description "Alias ls to lsd"
-    lsd $argv
+function ls --description "Alias ls to eza"
+    eza $argv
 end
 
 function ll --description "list all files, metadata as table, human-readable"
-    lsd -alh $argv
+    eza -alh --icons $argv
 end
 
 function lt --description="list all files, in tree"
-    ls --tree $argv
+    eza --tree $argv
 end
 
 function .. --description="cd .."
