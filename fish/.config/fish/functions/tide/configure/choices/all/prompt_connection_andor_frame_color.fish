@@ -1,0 +1,1 @@
+../../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/choices/all/prompt_connection_andor_frame_color.fish

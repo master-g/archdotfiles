@@ -1,0 +1,1 @@
+../../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/choices/all/prompt_colors.fish

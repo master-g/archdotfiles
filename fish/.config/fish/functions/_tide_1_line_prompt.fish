@@ -1,0 +1,1 @@
+../../../.dotfiles/fish/.config/fish/functions/_tide_1_line_prompt.fish

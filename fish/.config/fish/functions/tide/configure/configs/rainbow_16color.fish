@@ -1,0 +1,1 @@
+../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/configs/rainbow_16color.fish

@@ -1,0 +1,1 @@
+../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/functions/_fake_tide_item_character.fish

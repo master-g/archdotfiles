@@ -1,0 +1,1 @@
+../../../.dotfiles/fish/.config/fish/functions/_tide_find_and_remove.fish

@@ -1,0 +1,1 @@
+../../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/choices/powerline/powerline_right_prompt_frame.fish

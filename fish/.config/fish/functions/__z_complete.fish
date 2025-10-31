@@ -1,0 +1,1 @@
+../../../.dotfiles/fish/.config/fish/functions/__z_complete.fish

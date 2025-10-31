@@ -1,0 +1,1 @@
+../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/functions/_fake_tide_cache_variables.fish

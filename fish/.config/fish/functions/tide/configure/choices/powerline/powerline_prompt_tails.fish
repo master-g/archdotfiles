@@ -1,0 +1,1 @@
+../../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/choices/powerline/powerline_prompt_tails.fish

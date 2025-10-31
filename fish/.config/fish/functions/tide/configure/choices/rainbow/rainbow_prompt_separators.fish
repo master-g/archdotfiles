@@ -1,0 +1,1 @@
+../../../../../../../.dotfiles/fish/.config/fish/functions/tide/configure/choices/rainbow/rainbow_prompt_separators.fish

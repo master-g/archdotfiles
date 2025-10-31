@@ -1,0 +1,1 @@
+set -x TERM_PROGRAM_VERSION ""
