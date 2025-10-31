@@ -2,7 +2,4 @@ fish_variables
 fishd.*
 fish_history
 
-plugins/
-themes/
-
 local.fish
