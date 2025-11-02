@@ -421,7 +421,7 @@ switch $os_type
             /usr/local/anaconda3
 end
 
-set -l found_conda_path
+set -l found_conda_path ""
 for path in $conda_paths
     if test -f "$path/bin/conda"
         set found_conda_path "$path"
@@ -429,7 +429,7 @@ for path in $conda_paths
     end
 end
 
-if set -q found_conda_path
+if test -n "$found_conda_path"
     eval "$found_conda_path/bin/conda" "shell.fish" hook $argv | source
 
     if not functions -q conda
@@ -439,8 +439,6 @@ if set -q found_conda_path
             set -gx PATH "$found_conda_path/bin" $PATH
         end
     end
-else
-    echo "Conda not found in common locations. If installed elsewhere, add to PATH manually."
 end
 
 set -gx TERMINFO /usr/share/terminfo
